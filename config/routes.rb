@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Reservation resource:
+  # CREATE
+  get('/reservations/new', { :controller => 'reservations', :action => 'new' })
+  get('/create_reservation', { :controller => 'reservations', :action => 'create' })
+
+  # READ
+  get('/reservations', { :controller => 'reservations', :action => 'index' })
+  get('/reservations/:id', { :controller => 'reservations', :action => 'show' })
+
+  # UPDATE
+  get('/reservations/:id/edit', { :controller => 'reservations', :action => 'edit' })
+  get('/update_reservation/:id', { :controller => 'reservations', :action => 'update' })
+
+  # DELETE
+  get('/delete_reservation/:id', { :controller => 'reservations', :action => 'destroy' })
+  #------------------------------
+
   # Routes for the Item resource:
   # CREATE
   get('/', { :controller => 'items', :action => 'index' })
