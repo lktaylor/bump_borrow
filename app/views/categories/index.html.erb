@@ -55,7 +55,7 @@
 
 <div class="row">
   <div class="col-xs-12">
-    <input type="text" id="quicksearch" placeholder="Search Categories (start typing)" class="form-control">
+    <%= select_tag(:category_id, options_from_collection_for_select(Category.all, :id, :name), :class => "form-control") %>
   </div>
 </div>
 
