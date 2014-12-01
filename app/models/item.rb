@@ -1,6 +1,6 @@
 class Item < ActiveRecord::Base
   belongs_to :category
-  belongs_to :reservation
+  has_many :reservations
   validates :name, :presence => true
   validates :category, :presence => true
   validates :size, :presence => true
