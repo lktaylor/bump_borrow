@@ -24,7 +24,7 @@
           Reserve start
         </label>
         <div class="col-sm-10">
-          <input type="text" id="reserve_start" name="reserve_start" placeholder="Reserve start" class="form-control" value="<%= @reservation.reserve_start %>">
+          <input type="text" id="reserve_start" name="reserve_start" placeholder="mm-dd-yyyy" class="form-control" value="<%= @reservation.reserve_start %>">
         </div>
       </div>
 
@@ -54,7 +54,7 @@
           Item name
         </label>
         <div class="col-sm-10">
-          <input type="text" id="item_name" name="item_name" placeholder="Item name" class="form-control" value="<%= @reservation.item_name %>">
+          <%= select_tag(:item_name, options_from_collection_for_select(Items.all, :id, :name), :class => "form-control") %>
         </div>
       </div>
 
