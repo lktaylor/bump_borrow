@@ -44,7 +44,7 @@
           Size
         </label>
         <div class="col-sm-10">
-          <%= select_tag(:category_id, options_for_select([0, 2, 4, 6, 8, 10, 12, 14, 'S', 'M', 'L']), :class => "form-control") %>
+          <%= select_tag(:category_id, options_for_select([0, 2, 4, 6, 8, 10, 12, 14, 'S', 'M', 'L', 'XL']), :class => "form-control") %>
         </div>
       </div>
 
@@ -54,7 +54,7 @@
           Color
         </label>
         <div class="col-sm-10">
-          <input type="text" id="color" name="color" placeholder="Color" class="form-control" value="<%= @item.color %>">
+          <%= select_tag(:category_id, options_for_select(['Blue', 'Purple', 'Green', 'White', 'Black', 'Yellow', 'Red', 'Grey', 'Orange', 'Pink']), :class => "form-control") %>
         </div>
       </div>
 
