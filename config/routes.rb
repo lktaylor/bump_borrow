@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # Routes for the Reservation resource:
   # CREATE
   get('/reservations/new', { :controller => 'reservations', :action => 'new' })
