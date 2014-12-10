@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
     @item.price = params[:price]
     @item.created_at = params[:created_at]
     @item.updated_at = params[:updated_at]
-    @item.username = params[:username]
+
 
     if @item.save
       redirect_to "/items", :notice => "Item created successfully."
@@ -43,7 +43,7 @@ class ItemsController < ApplicationController
     @item.price = params[:price]
     @item.created_at = params[:created_at]
     @item.updated_at = params[:updated_at]
-    @item.username = params[:username]
+
 
     if @item.save
       redirect_to "/items", :notice => "Item updated successfully."
