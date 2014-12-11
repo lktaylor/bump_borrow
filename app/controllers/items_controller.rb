@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.all
+    @search = Item.search(params[:q])
+    @items = @search.result
   end
 
   def show
@@ -41,9 +43,6 @@ class ItemsController < ApplicationController
     @item.size = params[:size]
     @item.color = params[:color]
     @item.price = params[:price]
-    @item.created_at = params[:created_at]
-    @item.updated_at = params[:updated_at]
-
 
     if @item.save
       redirect_to "/items", :notice => "Item updated successfully."

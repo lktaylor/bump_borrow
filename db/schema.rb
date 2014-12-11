@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20141209215328) do
     t.string   "username"
   end
 
+
+
   create_table "reservations", force: true do |t|
     t.string   "username"
     t.integer  "item_id"
