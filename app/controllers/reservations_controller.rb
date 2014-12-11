@@ -30,13 +30,6 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
   end
 
-  def availability
-    @reservation = Reservation.new
-    @reservation.reserve_start = params[:reserve_start]
-    @reservation.reserve_end = params[:reserve_end]
-    @reservation.item_id = params[:item_id]
-  end
-
   def update
     @reservation = Reservation.find(params[:id])
 

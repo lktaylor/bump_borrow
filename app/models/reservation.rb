@@ -1,4 +1,4 @@
 class Reservation < ActiveRecord::Base
   belongs_to :item
-  validate :availability
+  # validate :availability
 end
