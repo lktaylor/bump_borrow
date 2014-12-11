@@ -14,7 +14,6 @@
         <tr>
           <th>Reserve start</th>
           <th>Reserve end</th>
-          <th>Username</th>
           <th>Item name</th>
           <th></th>
           <th></th>
@@ -27,7 +26,6 @@
           <tr>
             <td><%= reservation.reserve_start %></td>
             <td><%= reservation.reserve_end %></td>
-            <td><%= reservation.username %></td>
             <td><%= reservation.item.name %></td>
             <td>
               <a href="/reservations/<%= reservation.id %>" class="btn btn-primary">
